@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope&family=Poppins:wght@300&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+  }
+
+:root{
+    --space-cadet: #171738;
+    --federal-blue: #2E1760;
+    --zaffre: #3423A6;
+    --glaucous: #7180B9;
+    --honey-dew: #DFF3E4;
+    --border-radius: 1rem;
+}
+
+body{
+    font-family: 'Manrope', sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+
+.main{
+    background-color: var(--federal-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 2rem 3.5rem 2rem 3.5rem;
+    background-color: var(--honey-dew);
+    width: 50vw;
+    height: 80vh;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 8px 0 var(--glaucous), 0 6px 20px 0 var(--glaucous);
+}
+
+.inputContainer{
+    display: grid;
+    gap: 0.5rem;
+} 
+
+.inputContainer{
+  margin: 1rem;
+}
+
+.inputContainer input{
+    width: 20vw;
+    height: 5vh;
+    transition: all 0.3s;
+    border-radius: var(--border-radius);
+    padding-left: 1.3rem;
+    padding-right: 1.3rem;
+    font-size: large;
+    border:3px solid var(--glaucous);
+    outline: none;
+}
+
+.inputContainer input::placeholder{
+    width: 28vw;
+    height: 5vh;
+    transition: all 0.3s;
+    color: var(--zaffre);
+    font-size: large;
+    font-weight: 500;
+}
+
+.inputContainer input:focus{
+    border: 3px solid var(--zaffre);
+    box-shadow: 0 0 5px var(--glaucous); 
+}
+
+.error-message {
+  color: red;
+  font-size: 18px;
+  width: 100%;
+  padding: 0 17px;
+  display: block;
+  text-align: left;
+  transition: all 0.5s linear;
+}
+
+#inputLabel{
+    color: var(--zaffre);
+    font-size: 2.5rem;
+    text-shadow: 0 0 5px var(--glaucous);
+}
+
+.inputContainer button{
+    text-align: center;
+    height: 5vh;
+    border-radius: var(--border-radius);
+    font-size: large;
+    border:3px solid var(--glaucous);
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s;
+    background-color: var(--glaucous);
+}
+
+.inputContainer button{
+    color: #ffff;
+    font-size: 1.5rem;
+
+}
+
+.inputContainer button:hover{
+    box-shadow: 0 4px 8px 0 var(--glaucous), 0 6px 20px 0 var(--glaucous);
+    background-color: var(--space-cadet);
+}
+
+#mapSection{
+    width: 100%;
+    height: 80vh;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 8px 0 var(--space-cadet), 0 6px 20px 0 var(--honey-dew);
+}
+
+@media screen and (max-width: 992px) {
+  .container{
+    display: grid;
+    place-items: center;
+    justify-content: center;
+    margin: 2rem;
+  }
+
+  #mapSection{
+    height: 50dvh;
+  }
+
+  .inputContainer input::placeholder{
+    font-size: 0.9rem;
+  }
+
+  #inputLabel{
+    font-size: 0.9rem;
+}
+
+.inputContainer input{
+    width: 10rem;
+    height: 10vh;
+    border-radius: var(--border-radius);
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+    padding-bottom: 1.2rem;
+    font-size: large;
+    border:3px solid var(--glaucous);
+    outline: none;
+}
+
+}
+
+@media screen and (max-width: 400px) {
+  .container{
+    display: grid;
+    place-items: center;
+    justify-content: center;
+    margin: 2rem;
+  }
+
+  #mapSection{
+    height: 50dvh;
+  }
+
+  .inputContainer input::placeholder{
+    font-size: 10px;
+    text-wrap: wrap;
+  }
+}
